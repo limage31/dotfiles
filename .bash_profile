@@ -1,7 +1,6 @@
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+[[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh
+nvm use default
+npm_dir=${NVM_PATH}_modules
+export NODE_PATH=$npm_dir
 
-export PATH="$PATH:`yarn global bin`"
-export PATH="$HOME/.rbenv/bin:$PATH"
-source ~/.bashrc
-
+test -r ~/.bashrc && . ~/.bashrc
